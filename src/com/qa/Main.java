@@ -35,13 +35,13 @@ public class Main {
 //            System.out.println(animalList.get(x));
 //        }
 
-//        HashMap<String, Animal> animalMap = new HashMap<String, Animal>();
-//
-//        animalMap.put(c.getName(), c);
-//        animalMap.put(c2.getName(), c2);
-//        animalMap.put(d.getName(), d);
-//        animalMap.put(r.getName(), r);
-//        animalMap.put(r2.getName(), r2);
+        HashMap<String, Animal> animalMap = new HashMap<String, Animal>();
+
+        animalMap.put(c.getName(), c);
+        animalMap.put(c2.getName(), c2);
+        animalMap.put(d.getName(), d);
+        animalMap.put(r.getName(), r);
+        animalMap.put(r2.getName(), r2);
 //
 //        HashMap<Animal, String> animalMap2 = new HashMap<>();
 //
@@ -72,6 +72,15 @@ public class Main {
         System.out.println("Sorted animal list");
         for (int x = 0; x < animalList.size(); x++){
             System.out.println(animalList.get(x));
+        }
+
+        TreeMap<String, Animal> tree = new TreeMap<>();
+        tree.putAll(animalMap);
+
+        System.out.println("TreeMap");
+        for (String key : tree.keySet()){
+            System.out.println("Key: " + key + " Value: " +
+                    tree.get(key));
         }
 
 
